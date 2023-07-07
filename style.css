@@ -1,0 +1,438 @@
+*{
+    box-sizing: border-box;
+    margin-top: 0;
+    padding: 0;
+    text-decoration:none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-color: #1f242d;
+    color: #fff;
+}
+header{
+    position:fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #1f242d;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.logo{
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 600;
+    cursor: default;
+    margin-left: 4rem;
+    letter-spacing: 2px;
+}
+nav a{
+    color: rgb(255, 255, 255);
+    padding: 1px 4px ;
+}
+.navbar a{
+    color: #fff;
+    font-size: 1.5rem;
+    margin-left: 4rem; 
+    transition: .3s;  
+}
+.navbar a:hover{
+    color: #0ef;
+}
+#menu-icon{
+    font-size: 3.6rem;
+    color: #fff;
+    display: none;
+}
+section{
+    padding: 10rem  9% 4rem;
+}
+span{
+    color:#0ef;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-content h3{
+    font-size: 2.1rem;
+    font-weight: 700;
+    line-height: 0.8;
+}
+.home-content h1{
+    font-size: 4.3rem;
+    font-weight: 700;
+    line-height: 0.5;
+}
+.home-content p{
+    font-size: 1.3rem;
+}
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid #0ef;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: #0ef;
+    margin: 1rem 1.5rem 3rem 0;
+    transition: .5 ease;
+}
+.social-media a:hover{
+    background: #0ef;
+    color: #323946;
+    box-shadow: 0 0 1rem #0ef;
+}
+.btn{
+    display: inline-flex;
+    padding: 1rem 2.8rem;
+    background: #0ef;
+    border-radius: 4rem;
+    font-size: 1.4rem;
+    color:#323946;
+    box-shadow: 0 0 1rem #0ef;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+.btn:hover{
+    box-shadow: none;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    background-color: #323946;
+    margin-top: 5rem;
+}
+.heading{
+    text-align: center;
+    font-size: 3.5rem;
+}
+.about-content h2{
+    text-align: left;
+    line-height: 1.2;
+}
+.about-content h3{
+    font-size: 2.6rem;
+}
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+.services h2{
+    margin-bottom: 5rem;
+}
+.services-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.services-container .services-box{
+    flex:1 1 18rem;
+    background: #323946;
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid #1f242d;
+    transition: .5s ease;
+}
+.services-container .services-box:hover{
+    border-color: #0ef;
+    scale: 1.03;
+}
+.services-box i{
+    font-size: 7rem;
+    color: #0ef;
+}
+.services-box h3{
+    font-size: 2.1rem;
+}
+.services-box p{
+    font-size: 1.5rem;
+    margin: 1rem 0 3rem;
+}
+.projects{
+    background: #323946;
+}
+.projects h2{
+    margin-bottom: 4rem;
+}
+.projects-container{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.projects-container .projects-box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem #1f242d;
+    overflow: hidden;
+    display: flex;
+}
+.projects-box img{
+    width: 100%;
+    transition: .5s ease;
+}
+.projects-box:hover img{
+    transform: scale(1.1);
+}
+.projects-box .project-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(0,0,0,.1),#0ef);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding:0 3rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+.projects-box:hover .project-layer{
+    transform: translateY(0);
+}
+.project-layer h4{
+    font-size: 1.7rem;
+}
+.project-layer p{
+    font-size: 1.2rem;
+    margin: .3rem 0 .3rem;
+}
+.project-layer a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: #fff;
+    border-radius: 50%;
+}
+.project-layer a i{
+    font-size: 2rem;
+    color: #323946;
+}
+.contact h2{
+    margin-bottom: 3rem;
+}
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: #fff;
+    background: #323946;
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+.contact form .input-box input{
+    width: 49%;
+}
+.contact form textarea{
+    resize: none;
+    margin-bottom: 3rem;;
+}
+.contact form .btn{
+    cursor: pointer;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: #323946;
+}
+.footer-text p{
+    font-size: 1-6rem;
+}
+.footer-iconTop a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: #0ef;
+    border-radius: .7rem;
+    transition: .5 ease;
+}
+.footer-iconTop a:hover{
+    box-shadow: 0 0 1rem #0ef;
+}
+.footer-iconTop i{
+    font-size: 3rem;
+    color: #323946;
+}
+/* For Desktop View */
+@media screen and (max-width: 1200px)
+    and (min-width: 1024px) {
+    html{
+        font-size: 70%;
+    }
+}
+
+@media screen and (min-device-width: 991px)
+    and (max-device-width: 1024px) {
+        html {
+            font-size: 55%;
+        }
+}
+ 
+/* For Tablet View */
+@media screen and (min-device-width: 768px)
+    and (max-device-width: 991px) {
+    .header{
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .services{
+        padding-bottom: 7rem;
+    }
+    .projects{
+        padding-bottom: 7rem;
+    }
+    .contact{
+        min-height: auto;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+ 
+@media screen and (max-device-width: 768px){
+    #menu-icon {
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: #1f242d;
+        border-top: .1rem solid rgba(0,0,0,.2);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+    }
+    .navbar .active{
+        display: block;
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    .home-content h3{
+        font-size: 2.6rem;
+    }
+    .home-content h1{
+        font-size: 5rem;
+    }
+    .about{
+        flex-direction: column-reverse;
+    }
+    .services h2{
+        margin-bottom: 3rem;
+    }
+    .projects h2{
+        margin-bottom: 3rem;
+    }
+    .projects-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (max-device-width: 617px){
+    .projects-container{
+        grid-template-columns: 1fr;
+    }
+}
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 450px)
+    and (orientation: portrait) {
+    html {
+        font-size: 50%;
+    }
+    .contact form .input-box input {
+        width: 100%s;
+    }
+}
+ 
+/* For Mobile Landscape View
+@media screen and (max-device-width: 640px)
+    and (orientation: landscape) {
+    .gfg-div {
+        width: 400px;
+        height: 200px;
+        background-color: cyan;
+        color: black;
+    }
+}
+ 
+For Mobile Phones Portrait or Landscape View
+@media screen
+    and (max-device-width: 640px) {
+    .gfg-div {
+        width: 400px;
+        height: 200px;
+        background-color: chartreuse;
+        color: black;
+    }
+} */
+ 
+@media screen and (max-device-width:365px) {
+    .footer{
+        flex-direction: column-reverse;
+    }
+    .footer p{
+        text-align: center;
+        margin-top: 2rem;
+    }
+}
+/* For iPhone 4 Portrait or Landscape View
+@media screen and (min-device-width: 320px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+    
+}
+
+For iPhone 5 Portrait or Landscape View
+@media (device-height: 568px)
+    and (device-width: 320px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+For iPhone 6 and 6 plus Portrait or Landscape View
+@media (min-device-height: 667px)
+    and (min-device-width: 375px)
+    and (-webkit-min-device-pixel-ratio: 3) {
+    
+}; */
